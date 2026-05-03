@@ -1,0 +1,37 @@
+[[redirects]]
+  from = "https://redrivergorgeretreats.com/*"
+  to = "https://moonlightridgeretreat.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.moonlightridgeretreat.com/*"
+  to = "https://moonlightridgeretreat.com/:splat"
+  status = 301
+  force = true
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

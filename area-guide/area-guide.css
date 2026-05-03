@@ -1,0 +1,395 @@
+/* ══════════════════════════════════
+   Area Guide — page-specific styles
+══════════════════════════════════ */
+
+/* ── Page Hero ── */
+.guide-hero {
+  position: relative;
+  padding: 9rem 0 5rem;
+  background-image: url('../images/gallery-11.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  text-align: center;
+}
+
+.guide-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0.55) 100%);
+}
+
+.guide-hero .container { position: relative; z-index: 1; }
+
+.guide-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--warm-white);
+  line-height: 1.15;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.guide-hero .muted { color: var(--cedar); letter-spacing: 0.12em; }
+
+.guide-hero-sub {
+  max-width: 640px;
+  margin: 0 auto;
+  color: rgba(247,243,238,0.8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* ── TOC Bar ── */
+.guide-toc-bar {
+  position: sticky;
+  top: 70px;
+  z-index: 80;
+  background: var(--obsidian);
+  border-bottom: 1px solid rgba(201,151,58,0.2);
+}
+
+.guide-toc {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.guide-toc::-webkit-scrollbar { display: none; }
+
+.guide-toc a {
+  flex-shrink: 0;
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247,243,238,0.55);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.guide-toc a:hover,
+.guide-toc a.active {
+  color: var(--cedar);
+  border-bottom-color: var(--cedar);
+}
+
+
+/* ── Body Layout ── */
+.guide-body {
+  background: var(--warm-white);
+  padding: 4rem 0 6rem;
+}
+
+.guide-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+
+/* ── Sidebar ── */
+.guide-sidebar {
+  position: sticky;
+  top: 130px;
+}
+
+.sidebar-card {
+  background: var(--obsidian);
+  color: var(--warm-white);
+  border-radius: 4px;
+  padding: 2rem;
+  border: 1px solid rgba(201,151,58,0.2);
+}
+
+.sidebar-card .muted {
+  color: var(--cedar);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebar-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--warm-white);
+  margin: 0.4rem 0 0.75rem;
+}
+
+.sidebar-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(247,243,238,0.75);
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-details {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-top: 1px solid rgba(247,243,238,0.1);
+  padding-top: 1.25rem;
+}
+
+.sidebar-details div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.sidebar-details strong { color: var(--cedar); }
+.sidebar-details span  { color: rgba(247,243,238,0.55); }
+
+
+/* ── Guide Sections ── */
+.guide-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(26,26,26,0.1);
+}
+
+.guide-section:last-of-type { border-bottom: none; }
+
+.section-eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-number {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--cedar);
+  letter-spacing: 0.05em;
+}
+
+.section-eyebrow h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 300;
+  color: var(--obsidian);
+  margin: 0;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #444;
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+
+
+/* ── Guide Cards ── */
+.guide-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.guide-card {
+  background: #fff;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+
+.guide-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--obsidian);
+  margin: 0 0 0.75rem;
+}
+
+.guide-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.guide-card p:last-child { margin-bottom: 0; }
+
+.guide-card ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.guide-card li {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+
+.guide-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  background: rgba(201,151,58,0.15);
+  color: var(--cedar);
+}
+
+.tag-easy    { background: rgba(66,153,100,0.12); color: #2d6a4f; }
+.tag-moderate{ background: rgba(201,151,58,0.15); color: #8a6a1a; }
+.tag-must    { background: rgba(196,113,74,0.15); color: var(--terracotta); }
+.tag-local   { background: rgba(26,26,26,0.08); color: #555; }
+
+.tag-detail {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.guide-tip {
+  background: rgba(201,151,58,0.07);
+  border-left: 3px solid var(--cedar);
+  padding: 0.75rem 1rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem !important;
+  color: #555 !important;
+}
+
+
+/* ── Callout Block ── */
+.guide-callout {
+  background: rgba(26,26,26,0.04);
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.guide-callout strong { color: var(--obsidian); }
+
+
+/* ── Seasons Grid ── */
+.seasons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.season-card {
+  background: #fff;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+
+.season-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.season-icon { font-size: 1.4rem; }
+
+.season-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--obsidian);
+  margin: 0;
+}
+
+.season-header h3 span {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.season-card p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.season-card p:last-child { margin-bottom: 0; }
+.season-card strong { color: var(--obsidian); }
+
+
+/* ── Bottom CTA ── */
+.guide-cta-section {
+  padding: 5rem 0 2rem;
+  text-align: center;
+}
+
+.guide-cta-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.guide-cta-inner .muted {
+  color: var(--cedar);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.guide-cta-inner h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: var(--obsidian);
+  margin: 0.5rem 0 1rem;
+}
+
+.guide-cta-inner p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .guide-container {
+    grid-template-columns: 240px 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-container {
+    grid-template-columns: 1fr;
+  }
+  .guide-sidebar {
+    position: static;
+    order: -1;
+  }
+  .guide-cards {
+    grid-template-columns: 1fr;
+  }
+  .seasons-grid {
+    grid-template-columns: 1fr;
+  }
+  .guide-hero {
+    padding: 7rem 0 4rem;
+  }
+}

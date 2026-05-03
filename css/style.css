@@ -44,11 +44,11 @@ a { color: inherit; text-decoration: none; }
 h1, h2, h3 {
   font-family: var(--font-serif);
   font-weight: 300;
-  line-height: 1.15;
+  line-height: 1.05;
   letter-spacing: 0.01em;
 }
 
-h1 { font-size: clamp(3rem, 7vw, 6.5rem); }
+h1 { font-size: clamp(2.6rem, 6vw, 5.5rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
 h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
 
@@ -352,8 +352,12 @@ section { padding-block: var(--section-pad); }
 
 /* ── Section: The Experience ── */
 .section-experience {
-  background: #141414;
+  background: var(--warm-white);
 }
+
+.section-experience .muted { color: var(--cedar); }
+.section-experience h2, .section-experience h3 { color: var(--obsidian); }
+.section-experience p { color: #555; }
 
 .experience-intro {
   max-width: 72ch;
@@ -369,21 +373,21 @@ section { padding-block: var(--section-pad); }
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
-  background: var(--border);
+  gap: 2px;
+  background: rgba(0,0,0,0.08);
 }
 
 .experience-card {
-  background: #141414;
-  padding: clamp(2rem, 4vw, 3rem);
+  background: #fff;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
   position: relative;
   overflow: hidden;
 }
 
 .experience-card-img {
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   overflow: hidden;
-  margin-bottom: 1.75rem;
+  margin: -1.5rem -1.5rem 1.75rem;
 }
 .experience-card-img img {
   width: 100%;
@@ -394,7 +398,7 @@ section { padding-block: var(--section-pad); }
 .experience-card:hover .experience-card-img img { transform: scale(1.05); }
 
 .experience-card .muted { margin-bottom: 0.75rem; }
-.experience-card h3 { margin-bottom: 1rem; }
+.experience-card h3 { margin-bottom: 1rem; color: var(--obsidian); }
 
 /* ── Section: Hot Tub Feature ── */
 .section-hottub {
@@ -437,31 +441,32 @@ section { padding-block: var(--section-pad); }
 .hottub-content .btn { margin-top: 1rem; }
 
 /* ── Section: Amenities ── */
-.section-amenities { background: var(--obsidian); }
+.section-amenities { background: var(--warm-white); }
 
 .amenities-header {
   text-align: center;
   margin-bottom: clamp(3rem, 5vw, 4.5rem);
 }
-.amenities-header .muted { margin-bottom: 1rem; }
-.amenities-header h2 { margin-bottom: 1rem; }
+.amenities-header .muted { margin-bottom: 1rem; color: var(--cedar); }
+.amenities-header h2 { margin-bottom: 1rem; color: var(--obsidian); }
+.amenities-header p { color: #666; }
 
 .amenities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1px;
-  background: var(--border);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(0,0,0,0.08);
 }
 
 .amenity-item {
-  background: var(--obsidian);
+  background: #fff;
   padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   transition: background 0.2s;
 }
-.amenity-item:hover { background: #222; }
+.amenity-item:hover { background: #f8f5f0; }
 
 .amenity-icon {
   width: 2rem;
@@ -470,15 +475,16 @@ section { padding-block: var(--section-pad); }
 }
 
 .amenity-item strong {
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--obsidian);
 }
 
 .amenity-item span {
-  font-size: 0.78rem;
-  color: var(--muted);
-  line-height: 1.5;
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* ── Section: Gallery ── */
@@ -492,8 +498,8 @@ section { padding-block: var(--section-pad); }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 280px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 320px;
   gap: 4px;
 }
 
@@ -506,10 +512,10 @@ section { padding-block: var(--section-pad); }
 }
 .gallery-item:hover img { transform: scale(1.04); opacity: 0.9; }
 
-.g-wide  { grid-column: span 8; }
+.g-wide  { grid-column: span 2; }
 .g-tall  { grid-row: span 2; }
-.g-med   { grid-column: span 4; }
-.g-full  { grid-column: span 12; grid-row: span 1; max-height: 420px; }
+.g-med   { grid-column: span 1; }
+.g-full  { grid-column: span 3; grid-row: span 1; max-height: 420px; }
 
 .gallery-cta {
   text-align: center;

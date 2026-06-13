@@ -1,12 +1,18 @@
 [[redirects]]
-  from = "https://redrivergorgeretreats.com/*"
-  to = "https://moonlightridgeretreat.com/:splat"
+  from = "https://redrivergorgeretreat.com/*"
+  to = "https://moonlightridgeky.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.moonlightridgeretreat.com/*"
-  to = "https://moonlightridgeretreat.com/:splat"
+  from = "https://www.redrivergorgeretreat.com/*"
+  to = "https://moonlightridgeky.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.moonlightridgeky.com/*"
+  to = "https://moonlightridgeky.com/:splat"
   status = 301
   force = true
 
